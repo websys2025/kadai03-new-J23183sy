@@ -33,6 +33,10 @@
 
             // 商品購入の関数
             function buyItem(no) {
+                if (no < 1 || no > items.length) {
+                    console.log("エラー");
+                    return;
+                }
                 var item = items[no -1];
                 if (item.stock > 0){
                     item.stock--;
